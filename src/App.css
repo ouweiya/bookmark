@@ -1,0 +1,98 @@
+p {
+  margin: 0;
+  margin-top: 8px;
+}
+
+input.search {
+  height: 40px;
+  width: 500px;
+  margin: 8px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding: 0 16px;
+}
+
+.item {
+  /* display: flex; */
+  box-sizing: border-box;
+  padding-top: 10px;
+  align-items: center;
+  flex-direction: column;
+  width: 112px;
+  height: 112px;
+  background: #eee;
+  margin-right: 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  transition: 0.2s;
+  position: relative;
+}
+.item:last-child {
+  margin-right: 0;
+}
+.item img {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 16px;
+  background-size: 50%;
+}
+.item:hover {
+  background: #d6d6d6;
+}
+.item-conent {
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid red;
+}
+.item a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid red;
+}
+.item p {
+  border: 1px solid blue;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu {
+  background: pink;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.form {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo a {
+  display: flex;
+  margin: 8px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.todo a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
