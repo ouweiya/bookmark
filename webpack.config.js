@@ -68,7 +68,6 @@ module.exports = {
         { from: __dirname + '/src/manifest.json', to: __dirname + '/dist' },
         { from: __dirname + '/src/assets', to: __dirname + '/dist/assets' },
         { from: __dirname + '/src/background.js', to: __dirname + '/dist' },
-        { from: __dirname + '/src/selector.js', to: __dirname + '/dist' },
         { from: __dirname + '/src/content.js', to: __dirname + '/dist' }
       ],
       { copyUnmodified: true }

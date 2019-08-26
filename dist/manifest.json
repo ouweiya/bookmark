@@ -50,12 +50,13 @@
       },
       "description": "go to todo"
     },
-    "one": {
+    "addTodo": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "mac": "Command+Shift+Y"
+        "default": "Alt+W",
+        "windows": "Alt+W",
+        "mac": "Alt+W"
       },
-      "description": "curr"
+      "description": "addTodo"
     }
   }
 }

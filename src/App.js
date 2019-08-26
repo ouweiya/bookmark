@@ -3,18 +3,8 @@ import './App.css';
 import { Context } from './store/Provider';
 import Search from './components/Search';
 import Item from './components/Item';
-// import data from './last';
-
-// console.log(data);
-
-// chrome.bookmarks.search({ title: 'todo2' }, newFolder => {
-//   data.map(v => {
-//     const { title, url } = v;
-//     if (url) {
-//       chrome.bookmarks.create({ parentId: newFolder[0].id, title, url });
-//     }
-//   });
-// });
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 const App = () => {
   const [{ filtxt }, dispatch] = useContext(Context);
@@ -48,23 +38,14 @@ const App = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        border: '1px solid',
-        width: '80%',
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-        margin: 'auto'
-      }}
-    >
+    <Container>
       <Search />
-      <div className='item-conent'>
+      <Grid container spacing={1}>
         {Bookmark.filter(filterHandler).map(v => (
           <Item key={v.id} Bookmark={v} />
         ))}
-      </div>
-    </div>
+      </Grid>
+    </Container>
   );
 };
 
