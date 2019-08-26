@@ -21,13 +21,12 @@ const App = () => {
   const getSubTree = id => {
     chrome.bookmarks.getSubTree(id, v => {
       const BookmarkList = v[0].children.reduce(iteration, []);
-      console.log(BookmarkList);
       setBookmark(BookmarkList);
     });
   };
 
   useEffect(() => {
-    chrome.bookmarks.search({ title: 'new' }, v => {
+    chrome.bookmarks.search({ title: 'nav' }, v => {
       getSubTree(v[0].id);
       chrome.bookmarks.onRemoved.addListener(_ => getSubTree(v[0].id));
       chrome.bookmarks.onCreated.addListener(_ => getSubTree(v[0].id));

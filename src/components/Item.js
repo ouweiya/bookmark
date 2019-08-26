@@ -77,7 +77,7 @@ const Item = ({ Bookmark }) => {
           <Box className={classes.image} display='flex'>
             <img className={classes.img} src={`chrome://favicon/size/24/${Bookmark.url}`} />
           </Box>
-          <Typography variant='body2' noWrap>
+          <Typography variant='body2' noWrap style={{ fontSize: '12px' }}>
             {Bookmark.title}
           </Typography>
         </Link>
