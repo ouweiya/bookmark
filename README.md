@@ -6,7 +6,7 @@
 
 ##### 添加到待读清单
 
-<!-- ![todo.png](img/todo.png) -->
+![todo.png](img/todo.png)
 
 所有数据都存放在书签中, nav 目录存放导航网站, todo 目录存放待读网站.
 
