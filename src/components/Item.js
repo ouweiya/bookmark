@@ -68,7 +68,6 @@ const Item = ({ Bookmark }) => {
       <Grid item container direction='column'>
         <Link
           href={Bookmark.url}
-          target='_blank'
           title={Bookmark.title}
           color='inherit'
           underline='none'

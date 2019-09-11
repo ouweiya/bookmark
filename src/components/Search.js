@@ -38,7 +38,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center'
   },
   inputRoot: {
-    color: 'inherit'
+    color: 'inherit',
+    flex: 1
   }
 }));
 

@@ -2,7 +2,6 @@ import React, { useReducer } from 'react';
 export const Context = React.createContext(null);
 
 const reducer = (state, action) => {
-  console.log(state, action);
   switch (action.type) {
     case 'filtxt':
       return { ...state, filtxt: action.filtxt };

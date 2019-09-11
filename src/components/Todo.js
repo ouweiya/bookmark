@@ -90,14 +90,17 @@ const Todo = () => {
       }
       rows[rows.length - 1].push(
         <ListSubheader key={time.getDate()} component='div'>
-          {time.toLocaleDateString().split('/').join('-')}
+          {time
+            .toLocaleDateString()
+            .split('/')
+            .join('-')}
         </ListSubheader>
       );
     }
 
     rows[rows.length - 1].push(
       <ListItem button key={mark.id} className={classes.item}>
-        <ListItemLink href={mark.url} target='_blank' title={mark.title}>
+        <ListItemLink href={mark.url} title={mark.title}>
           <ListItemIcon classes={{ root: classes.iconRoot }}>
             <Avatar
               src={`chrome://favicon/size/16/${mark.url}`}
