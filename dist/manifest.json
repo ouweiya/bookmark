@@ -1,16 +1,8 @@
 {
   "name": "bookmark",
-  "version": "1.0",
+  "version": "1.2.0",
   "description": "书签增强",
-  "permissions": [
-    "tabs",
-    "activeTab",
-    "storage",
-    "<all_urls>",
-    "bookmarks",
-    "chrome://favicon/",
-    "contextMenus"
-  ],
+  "permissions": ["tabs", "<all_urls>", "bookmarks", "chrome://favicon/", "contextMenus"],
   "options_page": "index.html",
   "background": {
     "scripts": ["background.js"],
@@ -20,13 +12,14 @@
     "default_title": "书签",
     "default_icon": {
       "19": "assets/19.png",
-      "38": "assets/32.png"
+      "38": "assets/32.png",
+      "128": "assets/128.png"
     }
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "css": ["main.css"],
       "run_at": "document_start"
     }
   ],
@@ -44,9 +37,9 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+B",
-        "windows": "Ctrl+B",
-        "mac": "Command+B"
+        "default": "Alt+B",
+        "windows": "Alt+B",
+        "mac": "Alt+B"
       },
       "description": "go to todo"
     },

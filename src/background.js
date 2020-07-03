@@ -1,16 +1,15 @@
 const url = chrome.runtime.getURL('index.html#todo');
-chrome.browserAction.onClicked.addListener(activeTab => {
+chrome.browserAction.onClicked.addListener(() => {
   chrome.tabs.create({ url });
-  console.log('open');
 });
 
 const addTodo = () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const { id, title, url } = tabs[0];
 
     chrome.tabs.remove(id, () => {
-      chrome.bookmarks.search({ title: 'todo' }, newFolder => {
-        chrome.bookmarks.create({ parentId: newFolder[0].id, title, url }, newmarks => {
+      chrome.bookmarks.search({ title: 'todo' }, (newFolder) => {
+        chrome.bookmarks.create({ parentId: newFolder[0].id, title, url }, (newmarks) => {
           console.log('创建书签', newmarks);
         });
       });
@@ -18,7 +17,7 @@ const addTodo = () => {
   });
 };
 
-chrome.commands.onCommand.addListener(command => {
+chrome.commands.onCommand.addListener((command) => {
   if (command === 'addTodo') {
     addTodo();
   }
@@ -27,9 +26,9 @@ chrome.commands.onCommand.addListener(command => {
 chrome.contextMenus.create({
   id: 'todo',
   title: 'Add todo',
-  contexts: ['all']
+  contexts: ['all'],
 });
 
-chrome.contextMenus.onClicked.addListener(_ => {
+chrome.contextMenus.onClicked.addListener((_) => {
   addTodo();
 });

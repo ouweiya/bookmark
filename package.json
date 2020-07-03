@@ -18,7 +18,6 @@
     "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
-    "react-window": "^1.8.5",
     "redux": "^4.0.4",
     "style-loader": "^0.23.1",
     "typeface-roboto": "^0.0.75",
@@ -39,6 +38,7 @@
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "1.5.0"
+    "eslint-plugin-react-hooks": "1.5.0",
+    "webpack-dev-server": "^3.10.2"
   }
 }
